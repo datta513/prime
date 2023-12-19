@@ -8,7 +8,7 @@ export const Sldea = props => {
   const settings = {
     dots: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     centerMode: true,
     autoplaySpeed: 2000,
@@ -28,7 +28,7 @@ export const Sldec = props => {
   const settings = {
     dots: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     centerMode: true,
     autoplaySpeed: 2000,
