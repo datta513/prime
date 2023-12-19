@@ -1,4 +1,5 @@
-import Sldea from '../MoviesSlider/index'
+import {Sldea, Sldec} from '../MoviesSlider/index'
+import './index.css'
 
 const PrimeVideo = props => {
   const {moviesList} = props
@@ -6,14 +7,20 @@ const PrimeVideo = props => {
   const comedy = moviesList.filter(each => each.categoryId === 'COMEDY')
   console.log(action)
   return (
-    <div>
+    <div className="por">
       <img
         src="https://assets.ccbp.in/frontend/react-js/prime-video-img.png"
         alt=" prime video"
       />
       <div>
-        <h1>Action Movies</h1>
-        <Sldea action={action} />
+        <div className="cons">
+          <h1>Action Movies</h1>
+          <Sldea moviesList={action} />
+        </div>
+        <div className="cons">
+          <h1>Comedy Movies</h1>
+          <Sldec moviesList={comedy} />
+        </div>
       </div>
     </div>
   )

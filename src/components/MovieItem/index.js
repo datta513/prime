@@ -1,14 +1,23 @@
 import Popup from 'reactjs-popup'
+import ReactPlayer from 'react-player'
+import {IoMdClose} from 'react-icons/io'
 import './index.css'
 
 const Item = props => {
   const {item} = props
-  const pop = () => {}
-  console.log('entered')
+  const {thumbnailUrl, videoUrl} = item
   console.log(item)
   return (
-    <Popup trigger=<img src={item.thumbnailUrl} onClick={pop} />>
-      <h1>hello</h1>
+    <Popup modal trigger={<img src={thumbnailUrl} alt="thumbnail" />}>
+      {close => (
+        <div>
+          <button data-testid="closeButton" onClick={close}>
+            c <IoMdClose />
+          </button>
+
+          <ReactPlayer url={videoUrl} controls />
+        </div>
+      )}
     </Popup>
   )
 }
